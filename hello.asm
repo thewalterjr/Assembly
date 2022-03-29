@@ -5,8 +5,6 @@
 
 section .data ; Constantes do sistema (Apontamentos)
   msg: db 'Hello World!', 0xA
-  msgC: db 'Hello World!', 0xA
-
   tam: equ $- msg
 
 section .text
@@ -20,6 +18,7 @@ _start:
   mov EDX, tam
   int 0x80 
 
+saida:
   ;   destino, origem
   mov eax, 0x1 ; SO estou terminando o programa
   mov ebx, 0x0 ; SO o valor de retorno e 0
